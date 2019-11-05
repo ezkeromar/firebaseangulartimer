@@ -1,0 +1,11 @@
+/**
+ * @fileoverview added by tsickle
+ * @suppress {checkTypes,constantProperty,extraRequire,missingOverride,missingReturn,unusedPrivateMembers,uselessCode} checked by tsc
+ */
+/*
+ * Public API Surface of firebasecountdown
+ */
+export { FirebasecountdownService } from './lib/firebasecountdown.service';
+export { FirebasecountdownComponent } from './lib/firebasecountdown.component';
+export { FirebasecountdownModule } from './lib/firebasecountdown.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL2ZpcmViYXNlY291bnRkb3duLyIsInNvdXJjZXMiOlsicHVibGljLWFwaS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBSUEseUNBQWMsaUNBQWlDLENBQUM7QUFDaEQsMkNBQWMsbUNBQW1DLENBQUM7QUFDbEQsd0NBQWMsZ0NBQWdDLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIGZpcmViYXNlY291bnRkb3duXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9saWIvZmlyZWJhc2Vjb3VudGRvd24uc2VydmljZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9maXJlYmFzZWNvdW50ZG93bi5jb21wb25lbnQnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvZmlyZWJhc2Vjb3VudGRvd24ubW9kdWxlJztcbiJdfQ==

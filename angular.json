@@ -1,0 +1,164 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "firebasecountdown": {
+      "projectType": "library",
+      "root": "projects/firebasecountdown",
+      "sourceRoot": "projects/firebasecountdown/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/firebasecountdown/tsconfig.lib.json",
+            "project": "projects/firebasecountdown/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/firebasecountdown/src/test.ts",
+            "tsConfig": "projects/firebasecountdown/tsconfig.spec.json",
+            "karmaConfig": "projects/firebasecountdown/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/firebasecountdown/tsconfig.lib.json",
+              "projects/firebasecountdown/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "firebasecountdownshowcase": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "styl"
+        }
+      },
+      "root": "projects/firebasecountdownshowcase",
+      "sourceRoot": "projects/firebasecountdownshowcase/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/firebasecountdownshowcase",
+            "index": "projects/firebasecountdownshowcase/src/index.html",
+            "main": "projects/firebasecountdownshowcase/src/main.ts",
+            "polyfills": "projects/firebasecountdownshowcase/src/polyfills.ts",
+            "tsConfig": "projects/firebasecountdownshowcase/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/firebasecountdownshowcase/src/favicon.ico",
+              "projects/firebasecountdownshowcase/src/assets"
+            ],
+            "styles": [
+              "projects/firebasecountdownshowcase/src/styles.styl"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/firebasecountdownshowcase/src/environments/environment.ts",
+                  "with": "projects/firebasecountdownshowcase/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "firebasecountdownshowcase:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "firebasecountdownshowcase:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "firebasecountdownshowcase:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/firebasecountdownshowcase/src/test.ts",
+            "polyfills": "projects/firebasecountdownshowcase/src/polyfills.ts",
+            "tsConfig": "projects/firebasecountdownshowcase/tsconfig.spec.json",
+            "karmaConfig": "projects/firebasecountdownshowcase/karma.conf.js",
+            "assets": [
+              "projects/firebasecountdownshowcase/src/favicon.ico",
+              "projects/firebasecountdownshowcase/src/assets"
+            ],
+            "styles": [
+              "projects/firebasecountdownshowcase/src/styles.styl"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/firebasecountdownshowcase/tsconfig.app.json",
+              "projects/firebasecountdownshowcase/tsconfig.spec.json",
+              "projects/firebasecountdownshowcase/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/firebasecountdownshowcase/e2e/protractor.conf.js",
+            "devServerTarget": "firebasecountdownshowcase:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "firebasecountdownshowcase:serve:production"
+            }
+          }
+        }
+      }
+    }},
+  "defaultProject": "firebasecountdown"
+}

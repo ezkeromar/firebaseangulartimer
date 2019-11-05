@@ -1,0 +1,21 @@
+{
+  "name": "firebasecountdown",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.13",
+    "@angular/core": "^8.2.13"
+  },
+  "main": "bundles/firebasecountdown.umd.js",
+  "module": "fesm5/firebasecountdown.js",
+  "es2015": "fesm2015/firebasecountdown.js",
+  "esm5": "esm5/firebasecountdown.js",
+  "esm2015": "esm2015/firebasecountdown.js",
+  "fesm5": "fesm5/firebasecountdown.js",
+  "fesm2015": "fesm2015/firebasecountdown.js",
+  "typings": "firebasecountdown.d.ts",
+  "metadata": "firebasecountdown.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}
