@@ -6,14 +6,16 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
+import { TimersComponent } from './components/timers/timers.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimersComponent
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(environment.firebase, 'firebasecountdown'),
+    AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule
   ],
   providers: [],
